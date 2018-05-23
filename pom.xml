@@ -25,6 +25,13 @@
   <name>Microservicio Simple</name>
   <description>Microservicio Simple con Spring Boot y despliegue en OpenShift</description>
 
+   <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.12.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -33,21 +40,22 @@
 
     <maven.min.version>3.3.9</maven.min.version>
     <postgresql.version>9.4.1212</postgresql.version>
-    <spring-boot.version>1.5.12.RELEASE</spring-boot.version>
-    <spring-boot.bom.version>1.5.12.Final-redhat-1</spring-boot.bom.version>
+    
+<!--     <spring-boot.bom.version>1.5.12.Final-redhat-1</spring-boot.bom.version> -->
+   
     <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
     <fabric8-maven-plugin.version>3.5.38</fabric8-maven-plugin.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
-      <dependency>
-        <groupId>me.snowdrop</groupId>
-        <artifactId>spring-boot-bom</artifactId>
-        <version>${spring-boot.bom.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
+<!--       <dependency> -->
+<!--         <groupId>me.snowdrop</groupId> -->
+<!--         <artifactId>spring-boot-bom</artifactId> -->
+<!--         <version>${spring-boot.bom.version}</version> -->
+<!--         <type>pom</type> -->
+<!--         <scope>import</scope> -->
+<!--       </dependency> -->
     </dependencies>
   </dependencyManagement>
 
@@ -90,7 +98,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <version>${spring-boot.version}</version>
+<!--         <version>${spring-boot.version}</version> -->
         <configuration>
           <profiles>
             <profile>local</profile>
