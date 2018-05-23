@@ -46,7 +46,17 @@
     <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
     <fabric8-maven-plugin.version>3.5.38</fabric8-maven-plugin.version>
   </properties>
-
+  
+<repositories>
+    <repository>
+        <id>spring-milestones</id>
+        <name>Spring Milestones</name>
+        <url>http://repo.spring.io/milestone</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+</repositories>
   <dependencyManagement>
     <dependencies>
 <!--       <dependency> -->
