@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/v1/api/microservicio")
+@RequestMapping(value = "/microservicio")
 
 public class MicroServicioController {
 
-	@RequestMapping(value="/",method = RequestMethod.GET)
+	@RequestMapping(value="",method = RequestMethod.GET)
 	public String metodo() {
-		return "una cadena";
+		return "una cadena de un microservicio";
 	}
 }
