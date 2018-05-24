@@ -77,7 +77,15 @@
 <!--         <type>pom</type> -->
 <!--         <scope>import</scope> -->
 <!--       </dependency> -->
-    </dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Camden.SR7</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+   
   </dependencyManagement>
 
   <dependencies>
@@ -104,7 +112,17 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
+<!-- Cliente Eureka -->
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-starter-eureka</artifactId>
+		<version>1.0.0.RELEASE</version>
+	</dependency>
 
+	<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-netflix-eureka-client</artifactId>
+	</dependency>
     
     <!-- Testing -->
     <dependency>
