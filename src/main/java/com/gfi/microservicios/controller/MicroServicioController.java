@@ -12,6 +12,6 @@ public class MicroServicioController {
 
 	@RequestMapping(value="",method = RequestMethod.GET)
 	public String metodo() {
-		return "una cadena de un microservicio";
+		return "una cadena de un microservicio registrado con Eureka";
 	}
 }
