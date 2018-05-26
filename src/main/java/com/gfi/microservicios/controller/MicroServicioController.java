@@ -27,10 +27,20 @@ public class MicroServicioController {
 		return "una cadena de un microservicio registrado con Eureka";
 	}
 	
-	@RequestMapping(value="/dummy",method = RequestMethod.GET)
-	public String metodoDummy() {
-		String resultado= "hola dummy";
-		resultado=dummyDiscoveryClient.getDummy();
+	
+	@RequestMapping(value="/mensaje",method = RequestMethod.GET)
+	public String metodoDummyMensaje() {
+		String resultado= "hola dummy mensaje";
+		resultado=dummyDiscoveryClient.getDummyMensaje();
+		if (resultado==null) resultado= "hola dummy";
+		logger.info(resultado);
+		return resultado;
+	}
+	
+	@RequestMapping(value="/saludo",method = RequestMethod.GET)
+	public String metodoDummySaludo() {
+		String resultado= "hola dummy saludo";
+		resultado=dummyDiscoveryClient.getDummySaludo();
 		if (resultado==null) resultado= "hola dummy";
 		logger.info(resultado);
 		return resultado;
