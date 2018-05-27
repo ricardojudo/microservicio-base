@@ -1,7 +1,5 @@
 package com.gfi.microservicios.controller;
 
-
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.gfi.microservicios.client.DummyDiscoveryClient;
+import com.gfi.microservicios.client.DummyRestTemplateClient;
 
 @RestController
 @RequestMapping(value = "/microservicio")
@@ -17,9 +16,14 @@ import com.gfi.microservicios.client.DummyDiscoveryClient;
 public class MicroServicioController {
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-
+	
 	@Autowired
 	DummyDiscoveryClient dummyDiscoveryClient;
+	
+	@Autowired
+	DummyRestTemplateClient dummyRestTemplateClient; 
+
+	
 	
 	
 	@RequestMapping(value="",method = RequestMethod.GET)
@@ -41,6 +45,15 @@ public class MicroServicioController {
 	public String metodoDummySaludo() {
 		String resultado= "hola dummy saludo";
 		resultado=dummyDiscoveryClient.getDummySaludo();
+		if (resultado==null) resultado= "hola dummy";
+		logger.info(resultado);
+		return resultado;
+	}
+	
+	@RequestMapping(value="/v2/saludo",method = RequestMethod.GET)
+	public String metodoDummySaludov2() {
+		String resultado= "hola dummy saludo";
+		resultado=dummyRestTemplateClient.getSaludo();
 		if (resultado==null) resultado= "hola dummy";
 		logger.info(resultado);
 		return resultado;

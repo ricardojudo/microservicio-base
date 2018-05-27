@@ -118,6 +118,7 @@
   <classpathentry kind="var" path="M2_REPO/org/webjars/jquery/2.1.1/jquery-2.1.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/webjars/d3js/3.4.11/d3js-3.4.11.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/aspectj/aspectjtools/1.6.2/aspectjtools-1.6.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/netflix/ribbon/ribbon-httpclient/2.2.0-rc.1/ribbon-httpclient-2.2.0-rc.1.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-test/1.4.4.RELEASE/spring-boot-starter-test-1.4.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test/1.4.4.RELEASE/spring-boot-test-1.4.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/1.4.4.RELEASE/spring-boot-test-autoconfigure-1.4.4.RELEASE.jar"/>
