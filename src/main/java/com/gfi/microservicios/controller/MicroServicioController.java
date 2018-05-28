@@ -7,55 +7,48 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gfi.microservicios.client.DummyDiscoveryClient;
-import com.gfi.microservicios.client.DummyRestTemplateClient;
+import com.gfi.microservicios.client.DummyOAuth2RestTemplateClient;
+
+
+
+
 
 @RestController
 @RequestMapping(value = "/microservicio")
 
 public class MicroServicioController {
+		
+
+	@Autowired
+	DummyOAuth2RestTemplateClient dummyOAuth2RestTemplateClient; 
 	
 	private final Logger logger = LoggerFactory.getLogger(this.getClass());
-	
-	@Autowired
-	DummyDiscoveryClient dummyDiscoveryClient;
-	
-	@Autowired
-	DummyRestTemplateClient dummyRestTemplateClient; 
-
-	
-	
 	
 	@RequestMapping(value="",method = RequestMethod.GET)
 	public String metodo() {
 		return "una cadena de un microservicio registrado con Eureka";
 	}
 	
+ 
 	
-	@RequestMapping(value="/mensaje",method = RequestMethod.GET)
-	public String metodoDummyMensaje() {
-		String resultado= "hola dummy mensaje";
-		resultado=dummyDiscoveryClient.getDummyMensaje();
-		if (resultado==null) resultado= "hola dummy";
-		logger.info(resultado);
-		return resultado;
-	}
 	
-	@RequestMapping(value="/saludo",method = RequestMethod.GET)
-	public String metodoDummySaludo() {
+	@RequestMapping(value="/v3/mensaje",method = RequestMethod.GET)
+	public String metodoDummyMensajev3() {
 		String resultado= "hola dummy saludo";
-		resultado=dummyDiscoveryClient.getDummySaludo();
-		if (resultado==null) resultado= "hola dummy";
+		resultado=dummyOAuth2RestTemplateClient.getMensaje();
+		if (resultado==null) resultado= "hola dummy mensaje por omision";
 		logger.info(resultado);
 		return resultado;
 	}
 	
-	@RequestMapping(value="/v2/saludo",method = RequestMethod.GET)
-	public String metodoDummySaludov2() {
+	@RequestMapping(value="/v3/saludo",method = RequestMethod.GET)
+	public String metodoDummySaludov3() {
 		String resultado= "hola dummy saludo";
-		resultado=dummyRestTemplateClient.getSaludo();
-		if (resultado==null) resultado= "hola dummy";
+		resultado=dummyOAuth2RestTemplateClient.getSaludo();
+		if (resultado==null) resultado= "hola dummy saludo por omision";
 		logger.info(resultado);
 		return resultado;
 	}
+	
+
 }
