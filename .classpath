@@ -127,6 +127,14 @@
   <classpathentry kind="var" path="M2_REPO/org/springframework/security/oauth/spring-security-oauth2/2.0.12.RELEASE/spring-security-oauth2-2.0.12.RELEASE.jar" sourcepath="M2_REPO/org/springframework/security/oauth/spring-security-oauth2/2.0.12.RELEASE/spring-security-oauth2-2.0.12.RELEASE-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar" sourcepath="M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13-sources.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar" sourcepath="M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/cloud/spring-cloud-starter-sleuth/1.1.2.RELEASE/spring-cloud-starter-sleuth-1.1.2.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-aop/1.4.4.RELEASE/spring-boot-starter-aop-1.4.4.RELEASE.jar" sourcepath="M2_REPO/org/springframework/boot/spring-boot-starter-aop/1.4.4.RELEASE/spring-boot-starter-aop-1.4.4.RELEASE-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/cloud/spring-cloud-sleuth-core/1.1.2.RELEASE/spring-cloud-sleuth-core-1.1.2.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/aspectj/aspectjrt/1.8.9/aspectjrt-1.8.9.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/springframework/cloud/spring-cloud-sleuth-zipkin/1.1.2.RELEASE/spring-cloud-sleuth-zipkin-1.1.2.RELEASE.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/zipkin/java/zipkin/1.19.2/zipkin-1.19.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/zipkin/reporter/zipkin-reporter/0.6.12/zipkin-reporter-0.6.12.jar"/>
+  <classpathentry kind="var" path="M2_REPO/io/zipkin/reporter/zipkin-sender-urlconnection/0.6.12/zipkin-sender-urlconnection-0.6.12.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-test/1.4.4.RELEASE/spring-boot-starter-test-1.4.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test/1.4.4.RELEASE/spring-boot-test-1.4.4.RELEASE.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-test-autoconfigure/1.4.4.RELEASE/spring-boot-test-autoconfigure-1.4.4.RELEASE.jar"/>

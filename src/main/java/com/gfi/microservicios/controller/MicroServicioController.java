@@ -37,7 +37,7 @@ public class MicroServicioController {
 		String resultado= "hola dummy saludo";
 		resultado=dummyOAuth2RestTemplateClient.getMensaje();
 		if (resultado==null) resultado= "hola dummy mensaje por omision";
-		logger.info(resultado);
+		logger.debug(resultado);
 		return resultado;
 	}
 	
@@ -46,7 +46,7 @@ public class MicroServicioController {
 		String resultado= "hola dummy saludo";
 		resultado=dummyOAuth2RestTemplateClient.getSaludo();
 		if (resultado==null) resultado= "hola dummy saludo por omision";
-		logger.info(resultado);
+		logger.debug(resultado);
 		return resultado;
 	}
 	
