@@ -34,7 +34,7 @@ public class MicroServicioController {
 		resultado=dummyDiscoveryClient.getDummyMensaje();
 		if (resultado==null) resultado= "hola dummy";
 		logger.info(resultado);
-		return resultado;
+		return resultado.toUpperCase();
 	}
 	
 	@RequestMapping(value="/saludo",method = RequestMethod.GET)
@@ -43,6 +43,6 @@ public class MicroServicioController {
 		resultado=dummyDiscoveryClient.getDummySaludo();
 		if (resultado==null) resultado= "hola dummy";
 		logger.info(resultado);
-		return resultado;
+		return resultado.toUpperCase();
 	}
 }
